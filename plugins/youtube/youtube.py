@@ -423,9 +423,8 @@ def channel_strm(youtube_channel, youtube_channel_url, method):
         "{}/{}".format(
             media_folder,  
             sanitize(
-                "{} [{}]".format(
+                "{}".format(
                     yt.channel_name_folder,
-                    yt.channel_id
                 )
             )
         ),
@@ -439,9 +438,8 @@ def channel_strm(youtube_channel, youtube_channel_url, method):
         "tvshow",
         "{}/{}".format(
             media_folder, 
-            "{} [{}]".format(
+            "{}".format(
                 yt.channel_name_folder,
-                yt.channel_id
             )
         ),
         {
@@ -465,10 +463,8 @@ def channel_strm(youtube_channel, youtube_channel_url, method):
             video_thumbnail = str(line).rstrip().split(';')[3]
             video_description = str(line).rstrip().split(';')[4]
 
-            video_name = "{} - {} [{}]".format(
-                video_upload_date,
+            video_name = "{}".format(
                 video_upload_name, 
-                video_id
             )
 
             if extract_audio:
@@ -485,9 +481,8 @@ def channel_strm(youtube_channel, youtube_channel_url, method):
             file_path = "{}/{}/{}.{}".format(
                 media_folder,  
                 sanitize(
-                    "{} [{}]".format(
+                    "{}".format(
                         yt.channel_name_folder,
-                        yt.channel_id
                     )
                 ),  
                 sanitize(video_name), 
@@ -499,9 +494,8 @@ def channel_strm(youtube_channel, youtube_channel_url, method):
                 "episode",
                 "{}/{}".format(
                     media_folder, 
-                    "{} [{}]".format(
+                    "{}".format(
                         yt.channel_name_folder,
-                        yt.channel_id
                     )
                 ),
                 {
@@ -555,9 +549,8 @@ def keyword_strm(keyword, method):
             file_path = "{}/{}/{}.{}".format(
                 media_folder, 
                 sanitize(
-                    "{} [{}]".format(
+                    "{}".format(
                         youtube_channel_folder,
-                        channel_id
                     )
                 ),  
                 sanitize(video_name), 
@@ -568,9 +561,9 @@ def keyword_strm(keyword, method):
                 "{}/{}".format(
                     media_folder,  
                     sanitize(
-                        "{} [{}]".format(
+                        "{}".format(
                             youtube_channel_folder,
-                            channel_id
+
                         )
                     )
                 ),
@@ -589,9 +582,8 @@ def keyword_strm(keyword, method):
                 "tvshow",
                 "{}/{}".format(
                     media_folder, 
-                    "{} [{}]".format(
+                    "{}".format(
                         channel.channel_name_folder,
-                        channel_id
                     )
                 ),
                 {
