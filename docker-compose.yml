@@ -1,14 +1,15 @@
 ---
-version: "2.1"
 services:
-  ytdlp2strm:
-      image: fe80grau/ytdlp2strm
-      container_name: ytdlp2STRM
+  ytdl:
+      build: 
+        context: .
+      container_name: ytdl
       environment:
         - AM_I_IN_A_DOCKER_CONTAINER=Yes
         - DOCKER_PORT=5000
       volumes:
-        - D:/dev/media:/media
+        - ../dev:/media
+        - .:/code
       ports:
         - 5000:5000
       restart: always
